@@ -49,6 +49,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*{
+	box-sizing: border-box;
+}
+main {
+	margin: 20px;
+    display: flex;
+    flex-direction: column;
+	row-gap: 20px;
+}
 `;
 
 export default GlobalStyle;
