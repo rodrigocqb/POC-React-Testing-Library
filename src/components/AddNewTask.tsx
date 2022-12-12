@@ -12,6 +12,9 @@ export default function AddNewTask({
     <FormContainer
       onSubmit={(e) => {
         e.preventDefault();
+
+        if (newTask.task === "") return;
+
         setTasks((old) => {
           return [...old, newTask];
         });
@@ -31,7 +34,9 @@ export default function AddNewTask({
         }}
         required
       ></input>
-      <button type="submit">Create</button>
+      <button type="submit" data-testid="form">
+        Create
+      </button>
     </FormContainer>
   );
 }

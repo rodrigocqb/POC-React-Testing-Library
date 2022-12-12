@@ -28,13 +28,13 @@ export default function Task({
   }
 
   return (
-    <TaskContainer done={done}>
-      <IoCheckbox role="checkbox" />
+    <TaskContainer done={done} data-testid="listitem">
+      <IoCheckbox data-testid="checkbox" />
       <p>{task}</p>
-      <button onClick={updateTask} role="check-button">
+      <button onClick={updateTask} data-testid="switch">
         {done ? "Uncheck" : "Check"}
       </button>
-      <TrashWrapper onClick={deleteTask} role="remove">
+      <TrashWrapper onClick={deleteTask} data-testid="button">
         <IoTrash />
       </TrashWrapper>
     </TaskContainer>
