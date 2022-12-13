@@ -14,12 +14,6 @@ describe("App", () => {
     expect(button).toBeInTheDocument();
   });
 
-  it("should render a button to create new tasks", () => {
-    render(<App />);
-    const button = screen.getByText(/^Create$/i);
-    expect(button).toBeInTheDocument();
-  });
-
   it("should render three tasks", () => {
     render(<App />);
     const task1 = screen.getByText("Search about React Testing Library");
